@@ -3,7 +3,7 @@ const app       = express();
 const port      = 3000;
 
 app.get('/', (req, res) => {
-    res.send('<h1 style="text-align: center; font-size: 3em;">Landing Page</h1>')
+    res.send('<h1 style="text-align: center; font-size: 3em;color: blue">Landing Page</h1>')
 })
 
 app.get('/payments', (req, res) => {
