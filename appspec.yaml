@@ -1,15 +1,18 @@
 version: 0.0
 os: linux
 files:
-  - source: ./install.txt
-    destination: /tmp/CodeDeployExample
+  - source: /application
+    destination: /home/ubuntu/express
 hooks:
   BeforeInstall:
     - location: ./scripts/install-dependencies.sh
-      timeout: 900
+      timeout: 150
+      runas: root
   ApplicationStart:
     - location: ./scripts/start-service.sh
-      timeout: 900
+      timeout: 150
+      runas: root
   ValidateService:
     - location: ./scripts/validate-service.sh
-      timeout: 900
+      timeout: 150
+      runas: root
