@@ -12,4 +12,7 @@ bash nodesource_setup.sh
 apt-get install -y nodejs
 
 # Install pm2
-npm install pm2@latest express
+npm install pm2@latest express -y
+
+## Install dependencies
+npm install -y
