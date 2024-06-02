@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm start
+pm2 restart /home/ubuntu/service/index.js

@@ -2,8 +2,10 @@ const express   = require('express');
 const app       = express();
 const port      = 3000;
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    res.send('<h1 style="text-align: center; font-size: 3em;color: blue">Landing Page</h1>')
+    res.render('pages/index')
 })
 
 app.get('/payments', (req, res) => {
